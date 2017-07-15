@@ -1,0 +1,202 @@
+/* ===========- SavSamoylov.github.io -============
+| 
+| 1) General  - (Body, Typography, Global Rules)
+| 2) Layout   - (Header, Content, Footer)
+| 3) Elements - (Articles, Forms, Buttons)
+| 4) Media Queries
+|
+ ================================================*/
+
+
+ /*===============================================
+ 1) General  - (Body, Typography, Global Rules)
+ =================================================*/
+
+ body{
+ 	background: #f7f7f7;
+ 	font-family:'Roboto Mono', monospace;
+ 	margin:0;
+ 	padding:0;
+ 	color: #25292c;
+ }
+
+ a, a:hover, a:active, a:visited, a:focus{
+ 	text-decoration:none;
+ 	color: #25292c;
+ }
+
+ .page-Wrap{
+ 	position: relative;
+ 	width: 92%;
+ 	padding-left: 0 30px;
+ 	margin:0 auto;
+ }
+
+ *{
+ 	-webkit-box-sizing: border-box;
+ 	-moz-box-sizing: border-box;
+ 	box-sizing: border-box;
+ }
+
+ /*===============================================
+ 2) Layout   - (Header, Content, Footer)
+ =================================================*/
+
+#main-Header{
+	height:125px;
+	line-height: 125px;
+}
+
+.header-Logomark a{
+	color: #232527;
+}
+
+.header-Logomark{
+	position: relative;
+	float:left;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size:1.75em;
+ }
+
+.header-Menu{
+	position: relative;
+	float:right;
+}
+
+.header-Menu ul li{
+	display: inline;
+	padding:0 5px;
+}
+
+.header-Menu ul li a{
+	text-transform: uppercase;
+	font-size:.8em;
+	font-weight:700;
+	color:#232527;
+}
+
+.header-Menu ul li a:hover{
+	color:#607d8b;
+	transition:.2s;
+}
+
+.header-Menu ul li:last-child{
+	padding-right:0;
+}
+
+.main-Content{
+	padding:25px 0 50px;
+}
+
+.hero-Msg{
+	position: relative;
+	margin:50px auto;
+	text-align: left;
+	font-size:1.2em;
+	font-weight: 400;
+	line-height:1.3em;
+	background: #232527;
+	padding:40px 20px;
+	color:#ffffff;
+	  -moz-box-shadow:    0 10px 15px -5px #000;
+	  -webkit-box-shadow: 0 10px 15px -5px #000;
+	  box-shadow:         0 10px 15px -5px #000;
+}
+
+.hero-Msg span{
+	color:#e9ff42;
+}
+
+.hero-Msg a{
+	color: #ff9560;
+	border-bottom:2px dotted #ff9560;
+}
+
+.portfolio-Grid{
+	position: relative;
+	display:grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-column-gap:50px;
+	grid-row-gap:50px;
+}
+
+.pItem{
+	background: blue;
+}
+
+
+ /*===============================================
+ 3) Elements - (Articles, Forms, Buttons, Links)
+ =================================================*/
+
+
+.content-Heading{
+	position: relative;
+	margin:75px 0;
+	font-size: 1.2em;
+}
+
+
+ /*===============================================
+ 4) Media Queries
+ =================================================*/
+ @media (max-width:1270px ){
+
+.portfolio-Grid{
+	grid-template-columns: repeat(2, 1fr);
+}
+
+}
+
+
+ @media (max-width:732px ){
+
+#main-Header{
+	position: absolute;
+	width: 100%;
+	background: #232527;
+	height:inherit;
+	z-index:2;
+	text-align: center;
+}
+
+.header-Logomark{
+	position: relative;
+	width:100%;
+}
+
+.header-Logomark a{
+	color: #ffffff;
+}
+
+.header-Menu{
+	position: relative;
+	width:100%;
+	line-height: 45px;
+}
+
+.header-Menu ul li a{
+	color: #ffffff;
+}
+
+.main-Content{
+	padding-top:200px;
+}
+
+}
+
+ @media (max-width:575px ){
+.page-Wrap{
+	width:85%;
+}
+
+.hero-Msg{
+	font-size:.9em;
+ }
+
+ .portfolio-Grid{
+	grid-template-columns: repeat(1, 1fr);
+}
+
+}
