@@ -1,216 +1,298 @@
 /* ===========- SavSamoylov.github.io -============
-| 
+|
 | 1) General  - (Body, Typography, Global Rules)
 | 2) Layout   - (Header, Content, Footer)
 | 3) Elements - (Articles, Forms, Buttons)
 | 4) Media Queries
+| 5) Feature Queries
 |
- ================================================*/
+================================================*/
 
 
- /*===============================================
- 1) General  - (Body, Typography, Global Rules)
- =================================================*/
+/*===============================================
+1) General  - (Body, Typography, Global Rules)
+=================================================*/
 
- body{
- 	background: #eee;
- 	font-family:'Roboto Mono', monospace;
- 	margin:0;
- 	padding:0;
- 	color: #25292c;
- }
+body{
+  background: #eee;
+  font-family:'Roboto Mono', monospace;
+  margin:0;
+  padding:0;
+  color: #25292c;
+}
 
- a, a:hover, a:active, a:visited, a:focus{
- 	text-decoration:none;
- 	color: #25292c;
- }
+a, a:hover, a:active, a:visited, a:focus{
+  text-decoration:none;
+  color: #25292c;
+}
 
- .page-Wrap{
- 	position: relative;
- 	width: 92%;
- 	padding-left: 0 30px;
- 	margin:0 auto;
- }
+.page-Wrap{
+  position: relative;
+  width: 92%;
+  padding-left: 0 30px;
+  margin:0 auto;
+}
 
- *{
- 	-webkit-box-sizing: border-box;
- 	-moz-box-sizing: border-box;
- 	box-sizing: border-box;
- }
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
- /*===============================================
- 2) Layout   - (Header, Content, Footer)
- =================================================*/
+/*===============================================
+2) Layout   - (Header, Content, Footer)
+=================================================*/
 
 #main-Header{
-	height:125px;
-	line-height: 125px;
-	border-bottom:1px solid #dadada;
+  height:125px;
+  line-height: 125px;
+  border-bottom:1px solid #dadada;
 }
 
 .header-Logomark a{
-	color: #232527;
+  color: #232527;
 }
 
 .header-Logomark{
-	position: relative;
-	float:left;
-	text-transform: uppercase;
-	font-weight: 700;
-	font-size:1.75em;
- }
+  position: relative;
+  float:left;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size:1.75em;
+}
 
- .header-Logomark img{
- 	position: relative;
- 	top:10px;
- 	height: 45px;
- }
+.header-Logomark img{
+  position: relative;
+  top:10px;
+  height: 45px;
+}
 
- .header-Title{
- 	position: relative;
- 	float: left;
- 	padding:0 35px;
- }
+.header-Title{
+  position: relative;
+  float: left;
+  padding:0 35px;
+}
 
- .header-Title span{
- 	color: #7c7c7c;
- }
+.header-Title span{
+  color: #7c7c7c;
+}
 
 .header-Menu{
-	position: relative;
-	float:right;
+  position: relative;
+  float:right;
 }
 
 .header-Menu ul li{
-	display: inline;
-	padding:0 5px;
+  display: inline;
+  padding:0 5px;
 }
 
 .header-Menu ul li a{
-	font-size:1em;
-	font-weight:400;
-	color:#6f6f6f;
-	font-family:"BioRhyme" ,serif;
+  font-size:1em;
+  font-weight:400;
+  color:#6f6f6f;
+  font-family:"BioRhyme" ,serif;
 }
 
 .header-Menu ul li a:hover{
-	color:#ef483e;
-	transition:.2s;
+  color:#ef483e;
+  transition:.2s;
 }
 
 .header-Menu ul li:last-child{
-	padding-right:0;
+  padding-right:0;
 }
 
 .main-Content{
-	padding:25px 0 50px;
+  padding:25px 0 50px;
 }
 
 .hero-Msg{
-	position: relative;
-	margin:50px auto;
-	text-align: left;
-	font-size:1.2em;
-	font-weight: 400;
-	line-height:1.3em;
-	padding:40px 0;
-	color:#6f6f6f;
+  position: relative;
+  margin:50px auto;
+  text-align: left;
+  font-size:1.2em;
+  font-weight: 400;
+  line-height:1.3em;
+  padding:40px 0;
+  color:#6f6f6f;
 }
 
 
 .hero-Msg a{
-	color: #ef483e;
-	border-bottom:2px dotted #ef483e;
+  color: #ef483e;
+  border-bottom:2px dotted #ef483e;
 }
 
-.portfolio-Grid{
-	position: relative;
-	display:grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-column-gap:50px;
-	grid-row-gap:50px;
+/*.portfolio-Grid{
+position: relative;
+display:grid;
+grid-template-columns: repeat(3, 1fr);
+grid-column-gap:50px;
+grid-row-gap:50px;
 }
 
 .pItem{
-	background: blue;
+background: blue;
+}*/
+
+.portfolio-Grid {
+  position:relative;
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  justify-content: space-between;
+}
+.pItem {
+  position: relative;
+  background:salmon;
+  width: 30%;
+  margin-bottom: 150px;
 }
 
+.pItem img{
+  height:100%;
+}
 
- /*===============================================
- 3) Elements - (Articles, Forms, Buttons, Links)
- =================================================*/
+.pDescription{
+  position: absolute;
+  background: #fff;
+  width:95%;
+  top:87%;
+  left:2.5%;
+  padding:25px;
+}
+
+.pDescription h1{
+  font-size:1.8em;
+  font-family: "BioRhyme", serif;
+  font-weight:400;
+  letter-spacing: 1.5px;
+}
+
+.pDescription p{
+  padding:15px 0;
+  color: #8a8a8a;
+  letter-spacing: 2px;
+  line-height:1.25em;
+}
+
+.pDescription a{
+  float: right;
+  color:#ef483e;
+  margin-left: 20px;
+}
+/*===============================================
+3) Elements - (Articles, Forms, Buttons, Links)
+=================================================*/
 
 
 .content-Heading{
-	position: relative;
-	margin:0 0 50px;
-	font-size: 1.2em;
+  position: relative;
+  margin:0 0 50px;
+  font-size: 1.2em;
 }
 
 
- /*===============================================
- 4) Media Queries
- =================================================*/
- @media (max-width:1270px ){
+/*===============================================
+4) Media Queries
+=================================================*/
+@media (max-width:1270px ){
 
+  .pItem{width:47%;}
+  /*@supports (display: grid) {
+  .portfolio-Grid{
+  grid-template-columns: repeat(2, 1fr);
+}
+}*/
+
+}
+
+
+@media (max-width:732px ){
+
+  #main-Header{
+    position: relative;
+    width: 100%;
+    height:inherit;
+    z-index:2;
+    text-align: center;
+    overflow:hidden;
+    line-height: 75px;
+    padding:0 0 20px;
+  }
+
+  .header-Logomark{
+    position: relative;
+    width:100%;
+    margin-top:20px;
+  }
+
+  .header-Logomark a{
+    color: #ffffff;
+  }
+
+  .header-Title{
+    width:100%;
+  }
+
+  .header-Menu{
+    position: relative;
+    width:100%;
+    line-height: 45px;
+  }
+
+  .header-Menu ul li:last-child{
+    padding-right:5px;
+  }
+
+  .pItem{
+    margin-bottom:170px;
+  }
+
+}
+
+@media (max-width:575px ){
+  .page-Wrap{
+    width:85%;
+  }
+
+  .hero-Msg{
+    font-size:.9em;
+  }
+
+  .pItem{width:100%;}
+
+
+  /*@supports (display: grid) {
+  .portfolio-Grid{
+  grid-template-columns: repeat(1, 1fr);
+}
+}*/
+
+}
+
+
+/*===============================================
+5) Feature Queries
+=================================================*/
+/*@supports (display: grid) {
 .portfolio-Grid{
-	grid-template-columns: repeat(2, 1fr);
+position:relative;
+display:grid;
+grid-template-columns: repeat(3, 1fr);
+grid-column-gap:50px;
+grid-row-gap:50px;
 }
 
+.pItem{
+background: blue;
+width:auto;
+margin-bottom: 0;
 }
-
-
- @media (max-width:732px ){
-
-#main-Header{
-	position: relative;
-	width: 100%;
-	height:inherit;
-	z-index:2;
-	text-align: center;
-	overflow:hidden;
-	line-height: 75px;
-	padding:0 0 20px;
-}
-
-.header-Logomark{
-	position: relative;
-	width:100%;
-	margin-top:20px;
-}
-
-.header-Logomark a{
-	color: #ffffff;
-}
-
-.header-Title{
-	width:100%;
-}
-
-.header-Menu{
-	position: relative;
-	width:100%;
-	line-height: 45px;
-}
-
-.header-Menu ul li:last-child{
-	padding-right:5px;
-}
-
-
-}
-
- @media (max-width:575px ){
-.page-Wrap{
-	width:85%;
-}
-
-.hero-Msg{
-	font-size:.9em;
- }
-
- .portfolio-Grid{
-	grid-template-columns: repeat(1, 1fr);
-}
-
-}
+}*/
