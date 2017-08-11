@@ -150,9 +150,11 @@ background: blue;
 }
 .pItem {
   position: relative;
-  background:salmon;
+  background:#fff;
   width: 30%;
   margin-bottom: 150px;
+  padding:20px;
+  border-bottom:2px solid #ccc;
 }
 
 .pItem img{
@@ -161,18 +163,20 @@ background: blue;
 
 .pDescription{
   position: absolute;
-  background: #fff;
+  background: #f7f7f7;
   width:95%;
   top:87%;
   left:2.5%;
   padding:25px;
+  border-bottom:2px solid #ccc;
 }
 
 .pDescription h1{
-  font-size:1.8em;
+  font-size:1.25em;
   font-family: "BioRhyme", serif;
   font-weight:400;
   letter-spacing: 1.5px;
+  color:#292929;
 }
 
 .pDescription p{
