@@ -19,6 +19,7 @@ body{
   margin:0;
   padding:0;
   color: #25292c;
+  overflow-x: hidden;
 }
 
 a, a:hover, a:active, a:visited, a:focus{
@@ -256,7 +257,7 @@ background: blue;
   }
 
   .pItem{
-    margin-bottom:170px;
+    margin-bottom:190px;
   }
 
 }
@@ -266,8 +267,12 @@ background: blue;
     width:85%;
   }
 
+  .header-Title span{
+    display: block;
+  }
+
   .hero-Msg{
-    font-size:.9em;
+    font-size:1em;
   }
 
   .pItem{width:100%;}
